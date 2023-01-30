@@ -1,0 +1,138 @@
+GET, /a/shippings
+POST, /a/shippings
+GET, /a/shippings/{shipping_id}
+PUT, /a/shippings/{shipping_id}
+DELETE, /a/shippings/{shipping_id}
+
+GET, /a/shippings
+{
+    "success" : 1,
+    "error" : 1,
+    "shippings": [
+        {
+            "shipping_id": "",
+            "store_id": "",
+            "name": "",
+            "status": "",
+            "updated_at": "",
+        },
+        {
+            "shipping_id": "",
+            "store_id": "",
+            "name": "",
+            "status": "",
+            "updated_at": "",
+        }
+    ]
+}
+
+POST, /a/shippings
+{
+    "success" : 1,
+    "error" : 1,
+    "shippings": [
+        {
+            "shipping_id": "",
+            "store_id": "",
+            "name": "",
+            "status": "",
+            "updated_at": "",
+        }
+    ]
+}
+
+PUT, /a/shippings/{shipping_id}
+{
+    "success" : 1,
+    "error" : 1,
+    "shippings": [
+        {
+            "shipping_id": "",
+            "store_id": "",
+            "name": "",
+            "status": "",
+            "updated_at": "",
+        }
+    ]
+}
+
+DELETE, /a/stores/store_id
+{
+    "success": 1,
+    "error": 1,
+}
+
+-------------------------------------------------------------------------------
+GET, /a/shippings/{shipping_id}/rules
+POST, /a/shippings/{shipping_id}/rules
+GET, /a/shippings/{shipping_id}/rules/{rule_id}
+PUT, /a/shippings/{shipping_id}/rules/{rule_id}
+DELETE, /a/shippings/{shipping_id}/rules/{rule_id}
+
+GET, /a/shippings/{shipping_id}/rules
+{
+    "success" : 1,
+    "error" : 1,
+    "rules": [
+        {
+            'rule_id' : 1,
+            'name' : '',
+            'country' : '',
+            'description' :'',
+            'price' : 10.00,
+            'free_price' : 10.00,
+            'status' : 0,
+            "updated_at": "",
+        }
+    ]
+}
+
+POST, /a/shippings/{shipping_id}/rules
+{
+    "success" : 1,
+    "error" : 1,
+    "rules": [
+        {
+            'rule_id' : 1,
+            'name' : '',
+            'country' : '',
+            'description' :'',
+            'price' : 10.00,
+            'free_price' : 10.00,
+            'status' : 0,
+            "updated_at": "",
+        }
+    ]
+}
+
+PUT, /a/shippings/{shipping_id}/rules/{rule_id}
+{
+    "success" : 1,
+    "error" : 1,
+    "rules": [
+        {
+            'rule_id' : 1,
+            'name' : '',
+            'country' : '',
+            'description' :'',
+            'price' : 10.00,
+            'free_price' : 10.00,
+            'status' : 0,
+            "updated_at": "",
+        }
+    ]
+}
+
+DELETE, /a/shippings/rules/{rule_id}
+{
+    "success": 1,
+    "error": 1,
+}
+
+
+
+
+
+
+
+

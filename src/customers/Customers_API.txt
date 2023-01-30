@@ -1,0 +1,109 @@
+
+// Customers end points
+GET, /a/customers
+GET, /a/stores/{store_id}/customers
+POST, /a/stores/{store_id}/customers
+PUT, /a/stores/{store_id}/customers/{customer_id}
+DELETE, /a/stores/{store_id}/customers/{customer_id}
+
+
+
+// create Customer
+{
+  "success": "",
+  "error": "",
+  "customers": [
+    {
+      "user_id": "",
+      "user_name": "",
+      "first_name": "",
+      "last_name": "",
+      "details": "",
+      "website": "",
+      "country": "",
+      "city": "",
+      "date_of_birth": "",
+      "occupation": "",
+      "status": "",
+      "birthplace": "",
+      "interests": "",
+      "password": "",
+      "email": "",
+      "phone_number": "",
+      "created_at": "",
+      "updated_at": "",
+      "profile": "",
+      "cover": "",
+      "tag": "",
+      "create_id": ""
+    }
+  ]
+}
+
+//get customers
+{
+    "success" : "",
+    "error" : "",
+    "customers": [
+        {
+          "user_id": "",
+          "user_name": "",
+          "first_name": "",
+          "last_name": "",
+          "details": "",
+          "website": "",
+          "country": "",
+          "city": "",
+          "date_of_birth": "",
+          "occupation": "",
+          "status": "",
+          "birthplace": "",
+          "interests": "",
+          "password": "",
+          "email": "",
+          "phone_number": "",
+          "created_at": "",
+          "updated_at": "",
+          "profile": "",
+          "cover": "",
+          "tag": "",
+          "create_id": ""
+        }
+    ]
+}
+
+//update customer
+{
+    "success" : "",
+    "error" : "",
+    "customers" => [
+        {
+          "user_id": "",
+          "user_name": "",
+          "first_name": "",
+          "last_name": "",
+          "details": "",
+          "website": "",
+          "country": "",
+          "city": "",
+          "date_of_birth": "",
+          "occupation": "",
+          "status": "",
+          "birthplace": "",
+          "interests": "",
+          "password": "",
+          "email": "",
+          "phone_number": "",
+          "profile": "",
+          "cover": "",
+          "tag": "",
+          "create_id": ""
+        }
+    ]
+}
+
+//delete customer
+{
+    "success" : "",
+    "error" : "",
+}

@@ -1,0 +1,67 @@
+
+GET, /a/menus
+GET, /a/stores/{store_id}/menus
+POST, /a/stores/{store_id}/menus
+PUT, /a/stores/{store_id}/menus/{category_id}
+DELETE, /a/stores/{store_id}/menus/{category_id}
+
+
+// create menu
+{
+    "success" : "",
+    "error" : "",
+    "menus": [
+        {
+            "menu_id" : "",
+            "parent_id": "",
+            "store_id": "4",
+            "name": "Shirtsyy",
+            "link": "http://....",
+            "position": "2",
+            "status": "1",
+            "deleted": "0"
+        }
+    ]
+}
+
+//get menus
+{
+    "success" : "",
+    "error" : "",
+    "menus": [
+        {
+            "menu_id" : "",
+            "parent_id": "",
+            "store_id": "4",
+            "name": "Shirtsyy",
+            "link": "http://....",
+            "position": "2",
+            "status": "1",
+            "deleted": "0"
+        }
+    ]
+}
+
+
+{
+    "success" : "",
+    "error" : "",
+    "menus": [
+        {
+            "menu_id" : "",
+            "parent_id": "",
+            "store_id": "4",
+            "name": "Shirtsyy",
+            "link": "http://....",
+            "position": "2",
+            "status": "1",
+            "deleted": "0"
+        }
+    ]
+}
+
+//delete menu
+{
+    "success" : "",
+    "error" : "",
+}

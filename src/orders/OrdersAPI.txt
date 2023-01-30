@@ -1,0 +1,129 @@
+
+// order endpoints
+POST, /checkout
+PUT, /checkout/update/save_address
+PUT, /checkout/save
+
+# create order
+POST, /checkout
+{
+  "carts": [
+    {
+      "order_details": {
+        "cart_id": "",
+        "currency_id": ,
+        "shipping_gateway": "",
+        "payment_gateway": ""
+      },
+      "order_billing": {
+        "firstname": "",
+        "lastname": "",
+        "phone": "",
+        "email": "",
+        "country": "",
+        "city": "",
+        "street": "",
+        "house": "",
+        "apartment": "",
+        "use_for_shipping": 0,
+        "newsletter": 0
+      },
+      "order_shipping": {
+        "firstname": "",
+        "lastname": "",
+        "phone": "",
+        "email": "",
+        "country": "",
+        "city": "",
+        "street": "",
+        "house": "",
+        "apartment": "",
+        "use_for_shipping": 1,
+        "newsletter": 0
+      }
+    }
+  ]
+}
+
+# update billing or shipping address
+POST, /checkout/update/save_address
+{
+  "carts": [
+    {
+      "order_details": {
+        "cart_id": ""
+      },
+      "order_billing": {
+        "id":""
+        "firstname": "",
+        "lastname": "",
+        "phone": "",
+        "email": "",
+        "country": "",
+        "city": "",
+        "street": "",
+        "house": "",
+        "apartment": "",
+        "use_for_shipping": 0,
+        "newsletter": 0
+      },
+      "order_shipping": {
+        "id":""
+        "firstname": "",
+        "lastname": "",
+        "phone": "",
+        "email": "",
+        "country": "",
+        "city": "",
+        "street": "",
+        "house": "",
+        "apartment": "",
+        "use_for_shipping": 1,
+        "newsletter": 0
+      }
+    }
+  ]
+}
+
+# update order
+PUT, /checkout/save
+{
+  "carts": [
+    {
+      "order_details": {
+        "cart_id": "",
+        "currency_id": ,
+        "shipping_gateway": "",
+        "payment_gateway": ""
+      },
+      "order_billing": {
+        "id":""
+        "firstname": "",
+        "lastname": "",
+        "phone": "",
+        "email": "",
+        "country": "",
+        "city": "",
+        "street": "",
+        "house": "",
+        "apartment": "",
+        "use_for_shipping": 0,
+        "newsletter": 0
+      },
+      "order_shipping": {
+        "id":""
+        "firstname": "",
+        "lastname": "",
+        "phone": "",
+        "email": "",
+        "country": "",
+        "city": "",
+        "street": "",
+        "house": "",
+        "apartment": "",
+        "use_for_shipping": 1,
+        "newsletter": 0
+      }
+    }
+  ]
+}

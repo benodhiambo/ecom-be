@@ -1,0 +1,17 @@
+{% extends "admin.html" %} {% block admin_details %}
+
+<div>
+    {% if error is defined %}
+    <div>
+        <h4>
+            {{ error }}
+        </h4>
+    </div>
+    {% else %}
+    <div>
+        <h3>
+            Stores Management
+        </h3>
+    </div> {% block admin_stores_details %} {% endblock %} {% endif %}
+</div>
+{% endblock %}

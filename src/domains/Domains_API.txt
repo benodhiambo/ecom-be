@@ -1,0 +1,66 @@
+GET, /a/domains
+POST, /a/domains
+GET, /a/domains/{domain_id}
+PUT, /a/domains/{domain_id}
+DELETE, /a/domains/{domain_id}
+GET, /a/domains/{domain_id}/validate
+
+GET, /a/domains
+{
+    "success" : 1,
+    "error" : 1,
+    "domains": [
+        {
+            "domain_id": "",
+            "store_id": "",
+            "name": "",
+            "status": "",
+            "updated_at": "",
+            "verified" : ""
+        },
+        {
+            "domain_id": "",
+            "store_id": "",
+            "name": "",
+            "status": "",
+            "updated_at": "",
+            "verified" : ""
+        }
+    ]
+}
+
+POST, /a/domains
+{
+    "success" : 1,
+    "error" : 1,
+    "domains": [
+        {
+            "store_id": "",
+            "name": "",
+            "status": "",
+            "updated_at": "",
+            "verified" : ""
+        }
+    ]
+}
+
+PUT, /a/domains/{domains_id}
+{
+    "success" : 1,
+    "error" : 1,
+    "domains": [
+        {
+            "store_id": "",
+            "name": "",
+            "status": "",
+            "updated_at": "",
+            "verified" : ""
+        }
+    ]
+}
+
+DELETE, /a/domains/domains_id
+{
+    "success": 1,
+    "error": 1,
+}

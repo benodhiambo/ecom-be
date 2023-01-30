@@ -1,0 +1,83 @@
+{% extends "admin_product_categories.html" %} {% block admin_products_details %}
+
+<div>
+    {% if error is defined %}
+    <div>
+        <h4>
+            {{ error }}
+        </h4>
+    </div>
+    {% else %}
+    <div>
+        {% if products is defined and products is not empty %} {% for product in products %}
+        <h3>
+            Edit Product - {{product.name}}
+        </h3>
+
+        <div>
+            <form method="POST" action="{{base_path}}/admin/{{product.product_id}}/update">
+                <div class="input-group">
+                    <label>Product Name</label>
+                    <input type="text" name="name" value="{{product.name}}">
+                </div>
+                <div class="input-group">
+                    <label>Product SKU</label>
+                    <input type="text" name="sku" value="{{product.sku}}">
+                </div>
+                <div class="input-group">
+                    <label for="short_description">Short Product Description:</label>
+                    <textarea id="short_description" name="short_description" rows="4" cols="50">
+                        {{product.short_description}}
+                    </textarea>
+                </div>
+                <div class="input-group">
+                    <label for="description">Product Description:</label>
+                    <textarea id="description" name="description" rows="4" cols="50">
+                        {{product.description}}
+                    </textarea>
+                </div>
+                <div class="input-group">
+                    <label>Price</label>
+                    <input type="number" name="price" value="{{product.price}}">
+                </div>
+                <div class="input-group">
+                    <label>Sale Price</label>
+                    <input type="number" name="sale_price" value="{{product.sale_price}}">
+                </div>
+                <div class="input-group">
+                    <label>Sales Start (DD-MM-YYYY )</label>
+                    <input type="text" name="sale_start" value="{{product.sale_start}}">
+                </div>
+                <div class="input-group">
+                    <label>Sales End (DD-MM-YYYY )</label>
+                    <input type="text" name="sale_end" value="{{product.sale_end}}">
+                </div>
+                <div class="input-group">
+                    <label>Drop Price</label>
+                    <input type="number" name="drop_price" value="{{product.drop_price}}">
+                </div>
+                <div class="input-group">
+                    <label>Drop Sale Price</label>
+                    <input type="number" name="drop_sale_price" value="{{product.drop_sale_price}}">
+                </div>
+                <div class="input-group">
+                    <label>Drop Sales Start (DD-MM-YYYY )</label>
+                    <input type="text" name="drop_sale_start" value="{{product.drop_sale_start}}">
+                </div>
+                <div class="input-group">
+                    <label>Drop Sales End (DD-MM-YYYY )</label>
+                    <input type="text" name="drop_sale_end" value="{{product.drop_sale_end}}">
+                </div>
+                <div class="input-group">
+                    <label>Status</label>
+                    <input type="text" name="status" value="{{product.status}}">
+                </div>
+                <div class="input-group">
+                    <button type="submit" class="btn" name="reg_user">Update Product Details</button>
+                </div>
+            </form>
+        </div>
+        {% endfor %} {% endif %}
+    </div> {% endif %}
+</div>
+{% endblock %}

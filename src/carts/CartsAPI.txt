@@ -1,0 +1,109 @@
+
+// cart endpoints
+POST, /cart
+GET, /cart/{cart_id}
+PUT, /cart/{cart_id}
+DELETE, /cart/{cart_id}
+
+// cart items end points
+POST, cart/{cart_id}/product
+DELETE, cart/{cart_id}/product/{product_id}
+
+# create cart
+POST, /cart
+{
+    [
+      {
+        "cart_details": {
+          "currency_id": "",
+          "vat": "",
+          "discount": "",
+          "store_id": "",
+          "payment_gateway": ""
+        },
+        "cart_items": [
+          {
+            "product_id": "",
+            "name": "",
+            "price": "",
+            "sale_price": "",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+}
+
+# get cart details
+GET, /cart/{cart_id}
+{
+    [
+      {
+        "cart_details": {
+          "currency_id": "",
+          "vat": "",
+          "discount": "",
+          "store_id": "",
+          "payment_gateway": ""
+        },
+        "cart_items": [
+          {
+            "product_id": "",
+            "name": "",
+            "price": "",
+            "sale_price": "",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+}
+
+# Update Cart
+PUT, /cart/{cart_id}
+{
+    [
+      {
+        "cart_details": {
+          "currency_id": "",
+          "vat": "",
+          "discount": "",
+          "store_id": "",
+          "payment_gateway": ""
+        },
+        "cart_items": [
+          {
+            "product_id": "",
+            "name": "",
+            "price": "",
+            "sale_price": "",
+            "qty": 1
+          }
+        ]
+      }
+    ]
+}
+
+# deleting a cart
+DELETE, /cart/{cart_id}
+{}
+
+
+# adding items to cart
+POST, cart/{cart_id}/product
+{
+  "cart_items": [
+    {
+      "product_id": "",
+      "name": "",
+      "price": "",
+      "sale_price": "",
+      "qty": 1
+    }
+  ]
+}
+
+
+# removing item from a cart
+DELETE, cart/{cart_id}/product/{product_id}
+{}

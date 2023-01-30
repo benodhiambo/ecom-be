@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DREAM AX</title>
+    <link rel="stylesheet" href="{{base_path}}/assets/css/style.css"> {% block styles %}
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+        }
+        
+        thead {
+            color: rgb(39, 40, 44);
+        }
+        
+        tbody {
+            color: rgb(0, 0, 0);
+        }
+        
+        tfoot {
+            color: rgb(44, 44, 44);
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+        
+        td {
+            padding: 15px;
+        }
+        
+        td.action {
+            text-align: center;
+        }
+        
+        .comment-separator {
+            border: 1px solid grey;
+        }
+        
+        .btn-link {
+            background: none;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            color: #186ea7;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
+        .lang {
+            text-align: right;
+        }
+    </style>
+    {% endblock styles %} {% block headerjs %}{% endblock %}
+</head>
+
+<body>
+    {{ include('nav.html') }} {% block content %}{% endblock %} {{ include('footer.html') }} {% block bodyjs %}{% endblock %}
+</body>
+
+</html>

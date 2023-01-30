@@ -1,0 +1,91 @@
+{% extends "admin_product_categories.html" %} {% block admin_product_category_details %}
+
+<div>
+    {% if error is defined %}
+    <div>
+        <h4>
+            {{ error }}
+        </h4>
+    </div>
+    {% else %}
+    <div>
+        <h3>
+            Edit Product Category
+        </h3>
+        {% if products is defined and products is not empty %} {% for product in products %}
+
+        <div>
+            <form method="POST" action="{{base_path}}/admin/products/add">
+                <div class="input-group">
+                    <label>First Name</label>
+                    <input type="text" name="firstname" value="">
+                </div>
+                <div class="input-group">
+                    <label>Last Name</label>
+                    <input type="text" name="lastname" value="">
+                </div>
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" name="username" value="">
+                </div>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" name="email">
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" name="password">
+                </div>
+                <div class="input-group">
+                    <label>Confirm password</label>
+                    <input type="password" name="confirmpassword">
+                </div>
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phonenumber">
+                </div>
+                <div class="input-group">
+                    <label for="details">Details:</label>
+                    <textarea id="details" name="details" rows="4" cols="50" placeholder="Details"></textarea>
+                </div>
+                <div class="input-group">
+                    <label>Website</label>
+                    <input type="text" name="website">
+                </div>
+                <div class="input-group">
+                    <label>Country</label>
+                    <input type="text" name="country" value="">
+                </div>
+                <div class="input-group">
+                    <label>City</label>
+                    <input type="text" name="city" value="">
+                </div>
+                <div class="input-group">
+                    <label>Date Of Birth (DD-MM-YYYY )</label>
+                    <input type="text" name="date_of_birth">
+                </div>
+                <div class="input-group">
+                    <label>Occupation</label>
+                    <input type="text" name="occupation">
+                </div>
+                <div class="input-group">
+                    <label>Status</label>
+                    <input type="text" name="status">
+                </div>
+                <div class="input-group">
+                    <label>Birth Place</label>
+                    <input type="text" name="birthplace" value="">
+                </div>
+                <div class="input-group">
+                    <label for="interests">Interests:</label>
+                    <textarea id="interests" name="interests" rows="4" cols="50" placeholder="Interests"></textarea>
+                </div>
+                <div class="input-group">
+                    <button type="submit" class="btn" name="reg_user">Register</button>
+                </div>
+            </form>
+        </div>
+        {% endfor %} {% endif %}
+    </div> {% endif %}
+</div>
+{% endblock %}

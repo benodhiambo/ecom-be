@@ -1,0 +1,76 @@
+{% extends "admin_products.html" %} {% block admin_products_details %}
+
+<div>
+    {% if error is defined %}
+    <div>
+        <h4>
+            {{ error }}
+        </h4>
+    </div>
+    {% else %}
+    <div>
+        <h3>
+            Add New Product
+        </h3>
+        <div>
+            <form method="POST" action="{{base_path}}/admin/products/add">
+                <div class="input-group">
+                    <label>Product Name</label>
+                    <input type="text" name="firstname" value="">
+                </div>
+                <div class="input-group">
+                    <label>Product SKU</label>
+                    <input type="text" name="lastname" value="">
+                </div>
+                <div class="input-group">
+                    <label for="short_description">Short Product Description:</label>
+                    <textarea id="short_description" name="short_description" rows="4" cols="50"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="description">Product Description:</label>
+                    <textarea id="description" name="description" rows="4" cols="50"></textarea>
+                </div>
+                <div class="input-group">
+                    <label>Price</label>
+                    <input type="number" name="price">
+                </div>
+                <div class="input-group">
+                    <label>Sale Price</label>
+                    <input type="number" name="sale_price">
+                </div>
+                <div class="input-group">
+                    <label>Sales Start (DD-MM-YYYY )</label>
+                    <input type="text" name="sale_start">
+                </div>
+                <div class="input-group">
+                    <label>Sales End (DD-MM-YYYY )</label>
+                    <input type="text" name="sale_end">
+                </div>
+                <div class="input-group">
+                    <label>Drop Price</label>
+                    <input type="number" name="drop_price">
+                </div>
+                <div class="input-group">
+                    <label>Drop Sale Price</label>
+                    <input type="number" name="drop_sale_price">
+                </div>
+                <div class="input-group">
+                    <label>Drop Sales Start (DD-MM-YYYY )</label>
+                    <input type="text" name="drop_sale_start">
+                </div>
+                <div class="input-group">
+                    <label>Drop Sales End (DD-MM-YYYY )</label>
+                    <input type="text" name="drop_sale_end">
+                </div>
+                <div class="input-group">
+                    <label>Status</label>
+                    <input type="text" name="status">
+                </div>
+                <div class="input-group">
+                    <button type="submit" class="btn" name="reg_user">Add product</button>
+                </div>
+            </form>
+        </div>
+    </div> {% endif %}
+</div>
+{% endblock %}

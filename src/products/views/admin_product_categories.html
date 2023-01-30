@@ -1,0 +1,21 @@
+{% extends "admin.html" %} {% block admin_details %}
+
+<div>
+    {% if error is defined %}
+    <div>
+        <h4>
+            {{ error }}
+        </h4>
+    </div>
+    {% else %}
+    <div>
+        <h3>
+            Product Categories Management
+        </h3>
+        <nav>
+            <a href="{{base_path}}/admin/products/categories">All Product Categories</a> |
+            <a href="{{base_path}}/admin/products/categories/add">Add New Product Category</a> |
+        </nav>
+    </div> {% block admin_product_category_details %} {% endblock %} {% endif %}
+</div>
+{% endblock %}
